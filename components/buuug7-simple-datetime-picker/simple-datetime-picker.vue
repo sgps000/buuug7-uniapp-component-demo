@@ -50,11 +50,11 @@
 
 <script>
 const formatNum = num => {
-   return num < 10 ? '0' + num : num + '';
+   return num < 10 ? "0" + num : num + "";
 };
 
 export default {
-   name: 'datetime-picker',
+   name: "simple-datetime-picker",
    props: {
       startYear: {
          type: Number,
@@ -75,11 +75,11 @@ export default {
          minutes: [],
 
          currentDate: new Date(),
-         year: '',
-         month: '',
-         day: '',
-         hour: '',
-         minute: '',
+         year: "",
+         month: "",
+         day: "",
+         hour: "",
+         minute: "",
 
          value: [0, 0, 0, 0, 0]
       };
@@ -201,7 +201,7 @@ export default {
             hour: formatNum(this.hour),
             minute: formatNum(this.minute)
          };
-         this.$emit('submit', result);
+         this.$emit("submit", result);
          this.hide();
       }
    }
