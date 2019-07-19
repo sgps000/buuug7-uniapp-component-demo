@@ -7,7 +7,7 @@
 推荐从 npm 安装
 
 ```
-npm install buuug7-uniapp-components
+npm install @buuug7/uniapp-components
 
 ```
 
