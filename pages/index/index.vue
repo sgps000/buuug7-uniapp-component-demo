@@ -1,61 +1,22 @@
 <template>
    <view class="content">
-      <view class="field">
-         <view class="name">生日</view>
-         <view class="value" @click="openDatetimePicker">{{
-            birthday ? birthday : "请选择"
-         }}</view>
-      </view>
-
-      <!--datetime picker-->
-      <simple-datetime-picker
-         ref="myPicker"
-         @submit="handleSubmit"
-         :start-year="2000"
-         :end-year="2030"
-         color="#488ee9"
-      ></simple-datetime-picker>
+      <navigator
+         url="/pages/simple-datetime-picker/index"
+         style="margin-bottom: 1rem;"
+      >
+         <button>简单日期时间选择器</button>
+      </navigator>
+      <navigator
+         url="/pages/simple-loading-skeleton/index"
+         style="margin-bottom: 1rem;"
+      >
+         <button>简单加载骨架占位符</button>
+      </navigator>
    </view>
 </template>
 
-<script>
-
-import simpleDatetimePicker from '@buuug7/uniapp-components/lib/simple-datetime-picker'
-
-export default {
-   components: {
-      simpleDatetimePicker
-   },
-   data() {
-      return {
-         birthday: ""
-      };
-   },
-   methods: {
-      // 打开picker
-      openDatetimePicker() {
-         this.$refs.myPicker.show();
-      },
-
-      // 关闭picker
-      closeDatetimePicker() {
-         this.$refs.myPicker.hide();
-      },
-
-      // 监听选择
-      handleSubmit(e) {
-         console.log(e);
-         this.birthday = `${e.year}-${e.month}-${e.day} ${e.hour}:${e.minute}`;
-      }
-   }
-};
-</script>
-
 <style>
-.field {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   padding: 5px;
+.content {
+   margin: 1rem 0.5rem;
 }
 </style>
