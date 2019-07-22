@@ -4,7 +4,7 @@
    "description": "只支持选择日期和时间，只支持选择到分钟。",
    "main": "main.js",
    "dependencies": {
-      "buuug7-uniapp-components": "^1.0.7"
+      "@buuug7/uniapp-components": "^0.3.0"
    },
    "devDependencies": {
       "prettier": "^1.18.2"

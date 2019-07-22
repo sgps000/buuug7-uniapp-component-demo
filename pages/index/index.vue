@@ -13,12 +13,14 @@
          @submit="handleSubmit"
          :start-year="2000"
          :end-year="2030"
+         color="#488ee9"
       ></simple-datetime-picker>
    </view>
 </template>
 
 <script>
-import { simpleDatetimePicker } from "buuug7-uniapp-components";
+
+import simpleDatetimePicker from '@buuug7/uniapp-components/lib/simple-datetime-picker'
 
 export default {
    components: {
